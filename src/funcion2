@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+/**
+ *
+ * @author JonatanM
+ */
+public class Funcion {
+
+    private int diaDeSemana;
+    private Calendar horaDeInicio;
+    private int Duracion;
+    private int Numero;
+    private Pelicula pelicula;
+    private Sala sala;
+    private List<Entrada> entradas;
+
+
+
+    public Funcion(){entradas= new  ArrayList<Entrada>();
+    }
+
+
+
+
+    public Funcion(int diaDeSemana,Calendar horaDeInicio,int numero,int duracion,Pelicula pelicula,Sala sala){
+        this.diaDeSemana=diaDeSemana;
+        this.horaDeInicio=horaDeInicio;
+        this.Duracion=duracion;
+        this.Numero=numero;
+        this.pelicula=pelicula;
+        this.sala=sala;
+    }
+
+    public String mostrarDiaHora(){
+
+        String diaHora;
+        switch (this.diaDeSemana){
+
+            case 1: diaHora="Domingo" + this.horaDeInicio.getTime();break;
+
+            case 2: diaHora="Lunes" + this horaDeInicio.getTime();break;
+
+            case 3: diaHora="Martes" + this horaDeInicio.getTime();break;
+
+            case 4: diaHora="Miercoles" + this horaDeInicio.getTime();break;
+
+            case 5: diaHora="Jueves" + this horaDeInicion.getTime (); break;
+
+            case 6: diaHora="Viernes" + this horaDeInicio.getTime(); break;
+
+            case 7: diaHora="Sabado" + this horaDeInicio.get(); break;
+
+            default: diaHora="No es un dia"
+
+        }
+        return diaHora;
+
+
+
+    }
+
+
